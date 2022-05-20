@@ -17,7 +17,7 @@ class BiometricActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_livedata_flow_example)
 
         cryptographyManager = CryptographyManager()
         button = findViewById(R.id.loginBtn)
@@ -56,7 +56,7 @@ class BiometricActivity : AppCompatActivity() {
         return BiometricPrompt(this, executor, callback)
     }
 
-    private fun createPromptInfo() : BiometricPrompt.PromptInfo {
+    private fun createPromptInfo(): BiometricPrompt.PromptInfo {
         return BiometricPrompt.PromptInfo.Builder()
             .setTitle("HDFC Bank")
             .setSubtitle("Log in using your biometric credential")
